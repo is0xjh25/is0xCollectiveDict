@@ -19,6 +19,8 @@ Client: `java –jar DictionaryClient.jar <server-address> <server-port>`
   
 ### Demo (GUI) 
 
-***
-_more details in project specification!_
- 
+## Developed By
+- The application is developed by _[is0xjh25 (Yun-Chi Hsiao)](https://is0xjh25.github.io)_ 
+<br/>
+<p align="left">
+  <img alt="Favicon" src="src/images/is0-favicon.png" width="250" >
