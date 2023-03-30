@@ -10,10 +10,10 @@
 ## About the Application
 
 ## Getting Started
-- Server:
- >`java –jar DictionaryServer.jar <port> <dictionary-file>`
-- Client:
- >`java –jar DictionaryClient.jar <server-address> <server-port>`
+- Start up the server:
+ >Type in terminal: `java –jar DictionaryServer.jar <port> <dictionary-file>`
+- Open the graphic user interface on the client side:
+ >Type in terminal: `java –jar DictionaryClient.jar <server-address> <server-port>`
 
 ## Usage
 - **Login**
