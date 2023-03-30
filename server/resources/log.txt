@@ -1,0 +1,351 @@
+---------------------
+29/03/2023 18:08:46 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 18:08:46 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 18:10:38 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 18:10:38 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:31:59 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:31:59 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:42:43 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:42:43 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:44:29 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 20:44:29 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 20:45:17 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:45:17 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:46:08 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:46:08 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:46:33 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:46:33 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:49:37 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:49:37 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:50:15 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:50:15 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:50:29 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:50:29 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:51:43 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:51:43 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:52:05 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 20:52:05 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 20:55:02 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:55:02 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:55:09 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 20:55:09 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 20:56:19 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:56:19 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:56:25 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 20:56:25 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 20:56:52 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:56:52 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:56:58 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 20:56:58 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 20:57:31 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:57:31 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:57:37 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 20:57:37 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 20:58:23 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 20:58:23 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 20:58:28 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 20:58:28 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 21:00:17 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 21:00:17 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:00:23 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 21:00:23 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 21:01:38 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 21:01:38 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:01:44 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 21:01:44 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 21:02:19 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 21:02:19 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:02:27 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 21:02:27 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 21:23:10 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 21:23:10 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:23:21 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 21:23:21 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 21:23:34 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:23:34 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='handsome' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:26:30 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 21:26:30 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:26:36 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:26:36 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='handsome' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:26:55 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 21:26:55 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:27:01 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:27:01 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='handsome' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:27:36 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 21:27:36 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:27:42 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 21:27:42 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 21:27:53 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:27:53 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='handsome' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:30:03 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 21:30:03 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:30:29 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:30:29 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='handsome' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:31:51 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 21:31:51 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:32:05 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:32:05 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='handsome' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:32:14 | localhost:4444
+Request -> [action=UPDATE | word='Jim' | definition='handsome']
+29/03/2023 21:32:14 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='The definition has been updated.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:32:26 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:32:26 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='handsome' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:32:50 | localhost:4444
+Request -> [action=UPDATE | word='Jim' | definition='handsome']
+29/03/2023 21:32:50 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='The definition has been updated.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:33:02 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:33:02 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='handsome' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:40:39 | localhost:4444
+Request -> [action=CONNECT | word='null' | definition='null']
+29/03/2023 21:40:39 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Welcome to OpenSourced Dictionary.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:40:46 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 21:40:46 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 21:40:58 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:40:58 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='handsome' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:41:26 | localhost:4444
+Request -> [action=SEARCH | word='asd' | definition='null']
+29/03/2023 21:41:26 | localhost:4444
+Response -> [status=ERROR | code='204' | content='The word is NOT FOUND.' | suggestion='word']
+---------------------
+---------------------
+29/03/2023 21:41:45 | localhost:4444
+Request -> [action=ADD | word='Jim' | definition='Asdqweqwe']
+29/03/2023 21:41:45 | localhost:4444
+Response -> [status=ERROR | code='409' | content='The word is already exist.' | suggestion='Please use update to edit the definition.']
+---------------------
+---------------------
+29/03/2023 21:42:03 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:42:03 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='handsome' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:42:38 | localhost:4444
+Request -> [action=UPDATE | word='Jim' | definition='AHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoe']
+29/03/2023 21:42:38 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='The definition has been updated.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:42:47 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:42:47 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='AHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoeAHJSDiuqhiowueoiqwueoiqwuoieuqowiueoiqwueioqwuoe' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:43:07 | localhost:4444
+Request -> [action=UPDATE | word='Jim' | definition='Super cute']
+29/03/2023 21:43:07 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='The definition has been updated.' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:43:19 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:43:19 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Super cute' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:43:37 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | definition='null']
+29/03/2023 21:43:37 | localhost:4444
+Response -> [status=SUCCESS | code='200' | content='Super cute' | suggestion='null']
+---------------------
+---------------------
+29/03/2023 21:44:08 | localhost:4444
+Request -> [action=SEARCH | word='Jim' | 
