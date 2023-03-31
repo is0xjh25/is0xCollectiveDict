@@ -1,12 +1,15 @@
+// is0xCollectiveDict
+// COMP90015: Assignment1 - Multi-threaded Dictionary Server
+// Developed By Yun-Chi Hsiao (1074004)
+// GitHub: https://github.com/is0xjh25
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.net.URL;
 
-
 public class MainContent extends JPanel {
-
     final private static String MENU_GIF_URL = "/resources/menu.gif";
     final private static String LOADING_GIF_URL = "/resources/loading.gif";
     final private static String CONNECTION_GIF_URL = "/resources/connection.gif";

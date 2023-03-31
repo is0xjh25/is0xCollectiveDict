@@ -1,3 +1,8 @@
+// is0xCollectiveDict
+// COMP90015: Assignment1 - Multi-threaded Dictionary Server
+// Developed By Yun-Chi Hsiao (1074004)
+// GitHub: https://github.com/is0xjh25
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -8,7 +13,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 public class Footer extends JPanel {
-
     Footer() {
         this.setLayout(new BorderLayout());
         this.setPreferredSize(new Dimension(400, 50));
@@ -40,7 +44,7 @@ public class Footer extends JPanel {
                 try {
                     Desktop.getDesktop().browse(new URI("https://is0xjh25.github.io"));
                 } catch (URISyntaxException | IOException ex) {
-                    System.out.println("[ERROR]" + ex.getMessage());
+                    System.out.println("[ERROR] -> " + ex.getMessage());
                 }
             }
         });
@@ -51,9 +55,9 @@ public class Footer extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 try {
-                    Desktop.getDesktop().mail(new URI("mailto:is0.jimhsiao@gmail.com?subject=Problem%20With%20OpenSourced%20Dictionary"));
+                    Desktop.getDesktop().mail(new URI("mailto:is0.jimhsiao@gmail.com?subject=Problem%20With%20is0xCollectiveDict"));
                 } catch (URISyntaxException | IOException ex) {
-                    System.out.println("[ERROR]" + ex.getMessage());
+                    System.out.println("[ERROR] -> " + ex.getMessage());
                 }
             }
         });

@@ -1,5 +1,11 @@
+// is0xCollectiveDict
+// COMP90015: Assignment1 - Multi-threaded Dictionary Server
+// Developed By Yun-Chi Hsiao (1074004)
+// GitHub: https://github.com/is0xjh25
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -36,45 +42,45 @@ public class ButtonGroup extends JPanel {
             b.addActionListener(e -> {
                 switch (name) {
                     case "connect" -> {
-                        System.out.println("[CONNECT]\n");
+                        getPm().getDc().writeFile("[CONNECT]\n");
                         getPm().getDc().setAction(DictionaryClient.Page.CONNECT);
                         getPm().getDc().connect();
                     }
                     case "search" -> {
-                        System.out.println("[SEARCH]\n");
+                        getPm().getDc().writeFile("[SEARCH]\n");
                         getPm().getDc().setAction(DictionaryClient.Page.SEARCH);
                         getPm().getDc().sendQuery();
                     }
                     case "update" -> {
-                        System.out.println("[UPDATE]\n");
+                        getPm().getDc().writeFile("[UPDATE]\n");
                         getPm().getDc().setAction(DictionaryClient.Page.UPDATE);
                         getPm().pageControl(DictionaryClient.Page.UPDATE);
                     }
                     case "add" -> {
-                        System.out.println("[ADD]\n");
+                        getPm().getDc().writeFile("[ADD]\n");
                         getPm().getDc().setAction(DictionaryClient.Page.ADD);
                         getPm().pageControl(DictionaryClient.Page.ADD);
                     }
                     case "remove" -> {
-                        System.out.println("[REMOVE]\n");
+                        getPm().getDc().writeFile("[REMOVE]\n");
                         getPm().getDc().setAction(DictionaryClient.Page.REMOVE);
                         getPm().pageControl(DictionaryClient.Page.REMOVE);
                     }
                     case "discard" -> {
-                        System.out.println("[DISCARD]\n");
+                        getPm().getDc().writeFile("[DISCARD]\n");
                         getPm().pageControl(DictionaryClient.Page.MENU);
                     }
                     case "confirm" -> {
-                        System.out.println("[CONFIRM]\n");
+                        getPm().getDc().writeFile("[CONFIRM]\n");
                         getPm().getDc().sendQuery();
                     }
                     case "menu" -> {
-                        System.out.println("[MENU]\n");
+                        getPm().getDc().writeFile("[MENU]\n");
                         getPm().getDc().setAction(DictionaryClient.Page.MENU);
                         getPm().pageControl(DictionaryClient.Page.MENU);
                     }
                     case "reconnect" -> {
-                        System.out.println("[RECONNECT]\n");
+                        getPm().getDc().writeFile("[RECONNECT]\n");
                         getPm().getDc().setAction(DictionaryClient.Page.RECONNECT);
                         getPm().getDc().connect();
                     }
@@ -93,12 +99,12 @@ public class ButtonGroup extends JPanel {
     }
 
     void showButtons() {
-        // reset
+        // hide all buttons.
         getWarning().setVisible(false);
         for (JButton b : getButtons().values()) {
             b.setVisible(false);
         }
-        // determine if the entered text is available
+        // determine if the entered text is available.
         if (getPm().getDc().getCurrentPage() == DictionaryClient.Page.WAITING) {
             showWarning("...anything worth having takes time...");
             return;

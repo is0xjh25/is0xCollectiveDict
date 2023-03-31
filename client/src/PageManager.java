@@ -1,9 +1,13 @@
+// is0xCollectiveDict
+// COMP90015: Assignment1 - Multi-threaded Dictionary Server
+// Developed By Yun-Chi Hsiao (1074004)
+// GitHub: https://github.com/is0xjh25
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class PageManager extends JPanel {
-
     DictionaryClient dc;
     Header header;
     MainContent content;
@@ -16,13 +20,13 @@ public class PageManager extends JPanel {
         setHeader(new Header(this));
         setContent(new MainContent(this));
         setButtons(new ButtonGroup(this));
-        // merge panels
+        // merge panels.
         this.add(content, BorderLayout.CENTER);
         this.add(buttons, BorderLayout.SOUTH);
         this.add(header, BorderLayout.NORTH);
     }
 
-    // called by buttons
+    // called by buttons.
     public void pageControl(DictionaryClient.Page stage) {
         getDc().setCurrentPage(stage);
         getContent().resetContent();

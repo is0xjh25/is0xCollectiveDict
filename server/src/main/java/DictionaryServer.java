@@ -94,7 +94,8 @@ public class DictionaryServer {
         try {
             Files.createDirectories(Path.of("log"));
         } catch (IOException e) {
-            writeFile("[LOG FILE DIRECTORY CREATING ERROR]");
+            e.printStackTrace();
+            System.out.println("[LOG FILE DIRECTORY CREATING ERROR]");
         }
 
         try {
@@ -102,7 +103,8 @@ public class DictionaryServer {
             newFile.createNewFile(); // if file already exists will do nothing
             myWriter = new FileWriter(newFile, true);
         } catch (IOException e) {
-            writeFile("[LOG FILE CREATING ERROR]");
+            e.printStackTrace();
+            System.out.println("[LOG FILE CREATING ERROR]");
         }
     }
 
@@ -136,7 +138,6 @@ public class DictionaryServer {
             password = input.nextLine().toCharArray();
         } else {
             password = console.readPassword("Enter password: ");
-            System.out.println("");
         }
         return password;
     }

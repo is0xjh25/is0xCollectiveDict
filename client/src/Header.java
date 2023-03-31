@@ -1,3 +1,8 @@
+// is0xCollectiveDict
+// COMP90015: Assignment1 - Multi-threaded Dictionary Server
+// Developed By Yun-Chi Hsiao (1074004)
+// GitHub: https://github.com/is0xjh25
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -5,7 +10,6 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class Header extends JPanel {
-
     private PageManager pm;
     private JLabel title;
     private JTextField searchBox;
@@ -29,7 +33,7 @@ public class Header extends JPanel {
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED));
         getScrollSearchBox().setPreferredSize(new Dimension(200, 30));
         getScrollSearchBox().getHorizontalScrollBar().setPreferredSize(new Dimension(0, 3));
-        // immediately update the string
+        // immediately update the string.
         getSearchBox().addKeyListener(new KeyAdapter() {
             public void keyReleased(KeyEvent e) {
                 if (getPm().getDc().getCurrentPage() == DictionaryClient.Page.CONNECT || getPm().getDc().getCurrentPage() == DictionaryClient.Page.RECONNECT) {
