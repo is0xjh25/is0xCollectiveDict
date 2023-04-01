@@ -1,7 +1,7 @@
-// OpenSourced Dictionary
+// is0xCollectiveDict
 // COMP90015: Assignment1 - Multi-threaded Dictionary Server
 // Developed By Yun-Chi Hsiao (1074004)
-// is0xjh25
+// GitHub: https://github.com/is0xjh25
 
 import org.json.JSONException;
 import org.json.JSONObject;

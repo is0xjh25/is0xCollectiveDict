@@ -13,8 +13,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class DictionaryClient {
-    final private static String DEFAULT_IP = "localhost";
-    final private static String DEFAULT_PORT = "4444";
+    private static final String DEFAULT_IP = "localhost";
+    private static final String DEFAULT_PORT = "4444";
 
     private FileWriter myWriter;
     private Gui gui;
@@ -54,39 +54,38 @@ public class DictionaryClient {
     }
 
     public void connect() {
-        Runnable runnable = new Runnable() {
-            public void run() {
-                try {
-                    setCurrentPage(Page.CONNECTING);
-                    String ip = getIpAndPort().split(":")[0];
-                    int port = Integer.parseInt(getIpAndPort().split(":")[1]);
-                    setSocket(new Socket(ip, port));
-                    setIn(new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8)));
-                    setOut(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8)));
-                    sendQuery();
-                    writeFile("---------------------");
-                    writeFile("[CONNECTING FROM] -> " + socket.getLocalSocketAddress().toString().replace("/", ""));
-                    writeFile("[CONNECTING TO] -> " + getIpAndPort());
-                    writeFile("---------------------\n");
-                    while ((serverResponse = getIn().readLine()) != null) {
-                        handleResponse(getServerResponse());
-                    }
-                    writeFile("[CONNECTION CLOSED] -> " + getIpAndPort());
-                } catch (IOException e) {
-                    getGui().getPm().getContent().setErrorMessageLabel(e.getMessage() + ".");
-                    getGui().getPm().pageControl(Page.RECONNECT);
-                    writeFile("[ERROR] -> " + e.getMessage() + ".\n");
-                } finally {
-                    if (getSocket() != null) {
-                        try {
-                            getSocket().close();
-                        } catch (IOException e) {
-                            writeFile("[ERROR] -> " + e.getMessage() + ".\n");
-                        }
+        Runnable runnable = () -> {
+            try {
+                setCurrentPage(Page.CONNECTING);
+                String ip = getIpAndPort().split(":")[0];
+                int port = Integer.parseInt(getIpAndPort().split(":")[1]);
+                setSocket(new Socket(ip, port));
+                setIn(new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8)));
+                setOut(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8)));
+                sendQuery();
+                writeFile("---------------------");
+                writeFile("[CONNECTING FROM] -> " + socket.getLocalSocketAddress().toString().replace("/", ""));
+                writeFile("[CONNECTING TO] -> " + getIpAndPort());
+                writeFile("---------------------\n");
+                while ((serverResponse = getIn().readLine()) != null) {
+                    handleResponse(getServerResponse());
+                }
+                writeFile("[CONNECTION CLOSED] -> " + getIpAndPort() + "\n");
+            } catch (IOException e) {
+                getGui().getPm().getContent().setErrorMessageLabel(e.getMessage() + ".");
+                getGui().getPm().pageControl(Page.RECONNECT);
+                writeFile("[ERROR] -> " + e.getMessage() + ".\n");
+            } finally {
+                if (getSocket() != null) {
+                    try {
+                        getSocket().close();
+                    } catch (IOException e) {
+                        writeFile("[ERROR] -> " + e.getMessage() + ".\n");
                     }
                 }
             }
         };
+
         new Thread(runnable).start();
     }
 
@@ -158,13 +157,9 @@ public class DictionaryClient {
 
         // log the full TCP transmission.
         writeFile(Query.logPair(getRequest(), getResponse(), getIpAndPort()));
-
         // set stage to status.
-        ActionListener taskPerformer = evt -> {
-            getGui().getPm().pageControl(status);
-        };
-
-        getGui().getPm().setTimer(2000, taskPerformer);
+        ActionListener taskPerformer = evt -> getGui().getPm().pageControl(status);
+        getGui().getPm().setTimer(2000, taskPerformer); // minimum time for display loading screen.
     }
 
     public void reset() {
@@ -307,7 +302,7 @@ public class DictionaryClient {
     /* HELPER FUNCTIONS */
     public static String[] setUp(String[] args) {
         if (args.length != 2) {
-            System.out.println("Invalid port, using default \"IP:PORT->localhost:4444\"");
+            System.out.println("Invalid IP & Port, using default [localhost:4444]");
             return new String[]{DEFAULT_IP, DEFAULT_PORT};
         }
         return args;

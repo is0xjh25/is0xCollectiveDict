@@ -5,14 +5,12 @@
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
 
 public class ButtonGroup extends JPanel {
-
     PageManager pm;
     HashMap<String, JButton> buttons;
     JLabel warning;
@@ -26,7 +24,7 @@ public class ButtonGroup extends JPanel {
         getWarning().setPreferredSize(new Dimension(400, 25));
         getWarning().setForeground(Color.ORANGE);
         this.add(getWarning());
-        createButtons(); // set up all buttons
+        createButtons(); // set up all buttons.
         for (JButton b : getButtons().values()) {
             this.add(b);
         }

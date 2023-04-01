@@ -19,7 +19,7 @@ public class Gui extends JPanel {
     }
 
     public void run() {
-        System.out.println("[Activated CollectiveDict]");
+        System.out.println("[Activated CollectiveDict]\n");
         getDc().openFile();
         setUIFont(new FontUIResource(new Font("Monospaced", Font.BOLD, 14))); // set the overall font.
         setFrame(new JFrame("CollectiveDict"));
@@ -76,6 +76,7 @@ public class Gui extends JPanel {
         this.footer = footer;
     }
 
+    /* HELPER FUNCTIONS */
     private void setUIFont(FontUIResource f) {
         Enumeration<Object> keys = UIManager.getDefaults().keys();
         while (keys.hasMoreElements()) {

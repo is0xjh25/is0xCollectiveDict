@@ -1,66 +1,64 @@
+// is0xCollectiveDict
+// COMP90015: Assignment1 - Multi-threaded Dictionary Server
+// Developed By Yun-Chi Hsiao (1074004)
+// GitHub: https://github.com/is0xjh25
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.SocketException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class DictionaryServer {
-
-    private static int DEFAULT_PORT = 4444;
-    private int port;
+    private static final int DEFAULT_PORT = 4444;
+    private static int CLIENT_COUNT;
     private Dictionary dc;
     private FileWriter myWriter;
-    private ServerSocket listeningSocket;
-    private Socket clientSocket;
-    HashMap<String, Date> connectionRecords;
 
-    DictionaryServer(int port, char[] password) {
-        this.port = port;
-        openFile();
-        dc = new Dictionary(this, password);
+    DictionaryServer() {
+        CLIENT_COUNT = 0;
     }
 
-    public void run() {
-        try {
-            listeningSocket = new ServerSocket(port);
-            int i = 0;
-            while (true) {
-                writeFile("---------------------");
-                writeFile("[LISTENING] -> " + listeningSocket.getLocalSocketAddress().toString());
-                clientSocket = listeningSocket.accept();
-                i++;
-                writeFile("[CONNECTION SUCCEED] -> " + i + clientSocket.getRemoteSocketAddress().toString());
-                writeFile("---------------------\n");
+    public void setDc(Dictionary dc) {
+        this.dc = dc;
+    }
+
+    /* CLIENT HANDLER */
+    private static class ClientHandler implements Runnable {
+        private final DictionaryServer ds;
+        private final Socket clientSocket;
+        private final int clientNumber;
+
+        public ClientHandler(DictionaryServer ds, Socket clientSocket, int clientNumber) {
+            this.ds = ds;
+            this.clientSocket = clientSocket;
+            this.clientNumber = clientNumber;
+        }
+
+        @Override
+        public synchronized void run() {
+            try {
+                String clientAddress = clientSocket.getRemoteSocketAddress().toString();
+                ds.writeFile("[CONNECTION SUCCEED] -> " + clientNumber + clientAddress  + "\n");
                 BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 BufferedWriter out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
                 String clientQuery;
+
                 try {
-                    while((clientQuery = in.readLine()) != null) {
-                        String res = handleQuery(clientQuery, i + clientSocket.getRemoteSocketAddress().toString());
+                    while ((clientQuery = in.readLine()) != null) {
+                        String res = ds.handleQuery(clientQuery, clientNumber + clientSocket.getRemoteSocketAddress().toString());
                         out.write(res);
                         out.flush();
                     }
-                    writeFile("[CONNECTION CLOSED] -> " + i + clientSocket.getRemoteSocketAddress().toString());
-                } catch(SocketException e) {
-                    writeFile(e.getMessage());
-                }
-                clientSocket.close();
-            }
-        } catch (IOException e) {
-            writeFile(e.getMessage());
-        } finally {
-            if (listeningSocket != null) {
-                try {
-                    listeningSocket.close();
+                    ds.writeFile("[CONNECTION CLOSED] -> " + clientNumber + clientSocket.getRemoteSocketAddress().toString() + "\n");
                 } catch (IOException e) {
-                    writeFile(e.getMessage());
+                    ds.writeFile(e.getMessage());
                 }
+            } catch (IOException e) {
+                ds.writeFile(e.getMessage());
             }
         }
     }
@@ -92,15 +90,15 @@ public class DictionaryServer {
         LocalDateTime now = LocalDateTime.now();
 
         try {
-            Files.createDirectories(Path.of("log"));
+            Files.createDirectories(Path.of("server-log"));
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("[LOG FILE DIRECTORY CREATING ERROR]");
         }
 
         try {
-            File newFile = new File("log/" + dtf.format(now) + ".txt");
-            newFile.createNewFile(); // if file already exists will do nothing
+            File newFile = new File("server-log/" + dtf.format(now) + ".txt");
+            newFile.createNewFile(); // if file already exists will do nothing.
             myWriter = new FileWriter(newFile, true);
         } catch (IOException e) {
             e.printStackTrace();
@@ -134,17 +132,10 @@ public class DictionaryServer {
         Console console = System.console();
         char[] password;
         if (console == null) {
-            System.out.print("Enter password: ");
+            System.out.print("Enter the MongoDB Password: "); // for IDE terminal.
             password = input.nextLine().toCharArray();
         } else {
-            password = console.readPassword("Enter password: ");
-        }
-        return password;
-    }
-
-    public static char[] erasePassword(char[] password) {
-        for (int i=0; i<password.length; i++) {
-            password[i] = 'x';
+            password = console.readPassword("Enter the MongoDB Password: "); // for terminal.
         }
         return password;
     }
@@ -155,21 +146,35 @@ public class DictionaryServer {
             try {
                 port = Integer.parseInt(args[0]);
             } catch (NumberFormatException e) {
-                port = DEFAULT_PORT;
-                System.out.println("Invalid port, using default \"PORT:4444\"");
+                System.out.println("Invalid Port, using default [PORT:4444]");
             }
         }
         return port;
     }
 
-
     /* MAIN */
     public static void main(String[] args) {
         int port = setPort(args);
-        char[] password = readPassword();
-        DictionaryServer ds = new DictionaryServer(port, password);
-        erasePassword(password);
-        ds.run();
+        DictionaryServer ds = new DictionaryServer();
+        ds.openFile();
+        Dictionary dc = new Dictionary(ds, readPassword());
+        ds.setDc(dc);
+
+        // start the server.
+        try {
+            ServerSocket listeningSocket = new ServerSocket(port);
+            listeningSocket.setReuseAddress(true);
+            ds.writeFile("[LISTENING] -> " + listeningSocket.getLocalSocketAddress().toString() + "\n");
+            while (true) {
+                Socket clientSocket = listeningSocket.accept();
+                CLIENT_COUNT++;
+                ClientHandler clientSock = new ClientHandler(ds, clientSocket, CLIENT_COUNT);
+                new Thread(clientSock).start();
+            }
+        } catch (IOException e) {
+            ds.writeFile(e.getMessage());
+        }
+
         ds.closeFile();
     }
 }

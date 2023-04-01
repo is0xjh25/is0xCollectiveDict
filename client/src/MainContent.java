@@ -10,9 +10,9 @@ import java.awt.event.KeyEvent;
 import java.net.URL;
 
 public class MainContent extends JPanel {
-    final private static String MENU_GIF_URL = "/resources/menu.gif";
-    final private static String LOADING_GIF_URL = "/resources/loading.gif";
-    final private static String CONNECTION_GIF_URL = "/resources/connection.gif";
+    private static final String MENU_GIF_URL = "/resources/menu.gif";
+    private static final String LOADING_GIF_URL = "/resources/loading.gif";
+    private static final String CONNECTION_GIF_URL = "/resources/connection.gif";
 
     private PageManager pm;
     private JLabel connectionGIF;
@@ -147,7 +147,7 @@ public class MainContent extends JPanel {
     /* HELPER FUNCTIONS */
     private ImageIcon scaleImageIcon(URL url, int w, int h) {
         ImageIcon imageIcon = new ImageIcon(url);
-        Image image = imageIcon.getImage(); // transform it
+        Image image = imageIcon.getImage();
         Image newImage = image.getScaledInstance(w, h, java.awt.Image.SCALE_DEFAULT);
         return new ImageIcon(newImage);
     }

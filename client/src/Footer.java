@@ -13,6 +13,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 public class Footer extends JPanel {
+    private static final String WEBSITE = "https://is0xjh25.github.io";
+    private static final String EMAIL = "mailto:is0.jimhsiao@gmail.com?subject=Problem%20With%20is0xCollectiveDict";
+
     Footer() {
         this.setLayout(new BorderLayout());
         this.setPreferredSize(new Dimension(400, 50));
@@ -42,9 +45,9 @@ public class Footer extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 try {
-                    Desktop.getDesktop().browse(new URI("https://is0xjh25.github.io"));
+                    Desktop.getDesktop().browse(new URI(WEBSITE));
                 } catch (URISyntaxException | IOException ex) {
-                    System.out.println("[ERROR] -> " + ex.getMessage());
+                    System.out.println("[ERROR] -> " + ex.getMessage() + ".\n");
                 }
             }
         });
@@ -55,9 +58,9 @@ public class Footer extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 try {
-                    Desktop.getDesktop().mail(new URI("mailto:is0.jimhsiao@gmail.com?subject=Problem%20With%20is0xCollectiveDict"));
+                    Desktop.getDesktop().mail(new URI(EMAIL));
                 } catch (URISyntaxException | IOException ex) {
-                    System.out.println("[ERROR] -> " + ex.getMessage());
+                    System.out.println("[ERROR] -> " + ex.getMessage() + ".\n");
                 }
             }
         });
