@@ -39,7 +39,7 @@ public class DictionaryServer {
         }
 
         @Override
-        public synchronized void run() {
+        public void run() {
             try {
                 String clientAddress = clientSocket.getRemoteSocketAddress().toString();
                 ds.writeFile("[CONNECTION SUCCEED] -> " + clientNumber + clientAddress  + "\n");
@@ -63,7 +63,7 @@ public class DictionaryServer {
         }
     }
 
-    public String handleQuery(String s, String clientAddress) {
+    public synchronized String handleQuery(String s, String clientAddress) {
         Query request = new Query(Query.User.SERVER, s);
         Query response;
         // check the request from client is valid, then send the response.
