@@ -140,8 +140,8 @@ There is a reporting button on the footer which can email to is0.jimhsiao@gmail.
 
 - **Log File**
 <p align="center">
-  <img alt="Client Log File" src="demo/client-log-file.png" width="250">
-  <img alt="Server Log File" src="demo/server-log-file.png" width="250">
+  <img alt="Client Log File" src="demo/client-log.png" width="250">
+  <img alt="Server Log File" src="demo/server-log.png" width="250">
 </p>
 
 - **Password Promote**
