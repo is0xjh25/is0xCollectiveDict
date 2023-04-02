@@ -69,7 +69,7 @@ public class DictionaryServer {
         // check the request from client is valid, then send the response.
         if (request.isValid()) {
             switch (request.action) {
-                case CONNECT -> response = new Query(Query.Status.SUCCESS, "200", "Welcome to OpenSourced Dictionary.", null);
+                case CONNECT -> response = new Query(Query.Status.SUCCESS, "200", "Welcome to is0xCollectiveDict.", null);
                 case UPDATE -> response = dc.update(request.word, request.definition);
                 case SEARCH -> response = dc.search(request.word);
                 case ADD -> response = dc.add(request.word, request.definition);
