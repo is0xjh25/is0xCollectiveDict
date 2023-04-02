@@ -7,6 +7,7 @@
 * [Modules and Classes](#modules-and-classes)
 * [Excellence](#excellence)
 * [Creativity](#creativity)
+* [Demo](#demo)
 * [Developed By](#developed-by)
 
 ## About the Application
@@ -115,6 +116,38 @@ The loading GIF will be illustrated on the _Waiting Pag_e when a query is sent. 
 
 - **Feedback Support**<br>
 There is a reporting button on the footer which can email to is0.jimhsiao@gmail.com and the client can attach the client log file, so there is less bug in the next version of the _is0xCollectiveDict_.
+
+## Demo
+- **Connect Page**
+<p align="center">
+  <img alt="Connect Page" src="demo/connect-page.png" width="500">
+</p>
+
+- **Menu**
+<p align="center">
+  <img alt="Menu" src="demo/menu-2.png" width="500">
+</p>
+
+- **Search Page**
+<p align="center">
+  <img alt="Search Page" src="demo/search-page.png" width="500">
+</p>
+
+- **Status Page**
+<p align="center">
+  <img alt="Status Page" src="demo/status-page.png" width="500">
+</p>
+
+- **Log File**
+<p align="center">
+  <img alt="Client Log File" src="demo/client-log-file.png" width="250">
+  <img alt="Server Log File" src="demo/server-log-file.png" width="250">
+</p>
+
+- **Password Promote**
+<p align="center">
+  <img alt="Password Promote" src="demo/password-promote.png" width="500">
+</p>
 
 ## Developed By
 - The application is developed by _[is0xjh25 (Yun-Chi Hsiao)](https://is0xjh25.github.io)_ 
