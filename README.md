@@ -14,12 +14,16 @@
 _Is0xCollectiveDict_ is a dictionary application which includes the server and the client side. The server is built on multi-threading architecture which has the ability of handling concurrency TCP connection and queries from the users. Every data of the dictionary is stored on MongoDB which is stable and reliable. Moreover, the GUI of the client application is developed by _Swing_ to improve the user experience.
 
 ## Getting Started
+- Get the jar files:
+> In teriminal (package directory) `jar cf ${name for the created jar} *` 
+
 - Start up the server:
  >In terminal: `java –jar server.jar <port>`<br>
  >Enter the MongoDB Password: `<password>`
  
- Type the first command in the terminal (the port argument is optional). If there is no valid argument, the default port would be `4444`. Type the password for connecting to the database after the promote appears. To run the server, database access is required. Applying for the password or any connection issues, Please contact is0.jimhsiao@gmail.com<br><br>
-	<sup><sub>*Even the password is granted, the database connection is still protected by MongoDB Network Access. It means that the IP address needs to be permitted in the MongoDB setting to access the database.</sub></sup>
+ Type the first command in the terminal (the port argument is optional). If there is no valid argument, the default port would be `4444`. Type the password for connecting to the database after the promote appears. To run the server, database access is required.<br><br>
+<sup><sub>*Applying for the password or any connection issues, Please contact is0.jimhsiao@gmail.com<br>
+*Even the password is granted, the database connection is still protected by MongoDB Network Access. It means that the IP address needs to be permitted in the MongoDB setting to access the database.</sub></sup>
 
 - Open the graphic user interface on the client side:
  >In terminal: `java –jar client.jar <server-address> <server-port>`
