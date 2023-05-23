@@ -11,7 +11,7 @@
 * [Developed By](#developed-by)
 
 ## About the Application
-_Is0xCollectiveDict_ is a dictionary application which includes the server and the client side. The server is built on multi-threading architecture which has the ability of handling concurrency TCP connection and queries from the users. Every data of the dictionary is stored on MongoDB which is stable and reliable. Moreover, the GUI of the client application is developed by _Swing_ to improve the user experience.
+_is0xCollectiveDict_ is a dictionary application which includes the server and the client side. The server is built on multi-threading architecture which has the ability of handling concurrency TCP connection and queries from the users. Every data of the dictionary is stored on MongoDB which is stable and reliable. Moreover, the GUI of the client application is developed by _Swing_ to improve the user experience.
 
 ## Getting Started
 - Get the jar files:
