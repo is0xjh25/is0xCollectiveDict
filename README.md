@@ -15,7 +15,7 @@ _is0xCollectiveDict_ is a dictionary application which includes the server and t
 
 ## Getting Started
 - Get the jar files:
-> In teriminal (package directory) `jar cf ${name for the created jar} *` 
+> In teriminal (package directory): `jar cf ${name for the created jar} *` 
 
 - Start up the server:
  >In terminal: `java –jar server.jar <port>`<br>
